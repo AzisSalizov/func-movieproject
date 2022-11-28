@@ -1,0 +1,19 @@
+{% extends 'moviedjango/base.html' %}
+
+      {% block content %}
+         <form method="post" class="form" enctype="multipart/form-data">
+            {%csrf_token%}
+            <div class="container">
+               <div class="form_content">
+                  <center><h1 class="form_title">Добавления фильма в рекомендуемые фильмы</h1></center>
+                  {{form.title}}
+                  {{form.descr}}
+                  {{form.country}}
+                  {{form.genress}}
+                  {{form.url}}
+                  {{form.image}}
+                  <button class="btn btn-success" type="submit">Добавить</button>
+               </div>
+            </div>
+         </form>
+      {% endblock  %}
