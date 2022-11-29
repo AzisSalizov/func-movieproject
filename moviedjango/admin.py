@@ -1,8 +1,6 @@
 from django.contrib import admin
-from .models import Genress , Category , AddFilm
+from .models import AddFilm
 
 # Register your models here.
 
-admin.site.register(Genress)
-admin.site.register(Category)
 admin.site.register(AddFilm)

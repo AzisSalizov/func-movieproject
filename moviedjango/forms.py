@@ -1,23 +1,8 @@
 from django.forms import ModelForm  , TextInput
 
-from .models import Genress , Category , AddFilm
+from .models import AddFilm
 
 
-class GenressForm(ModelForm):
-    class Meta:
-        model = Genress
-        fields = ['title']
-        widgets = {
-            'title': TextInput(attrs={'class' : 'form-control mb-3' , 'placeholder' : 'Жанры'})
-        }
-
-class CategoryForm(ModelForm):
-    class Meta:
-        model = Category
-        fields = ['title']
-        widgets = {
-            'title': TextInput(attrs={'class' : 'form-control mb-3' , 'placeholder' : 'Категория'})
-        }
 
 class AddFilmForm(ModelForm):
     class Meta:
