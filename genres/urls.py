@@ -3,7 +3,6 @@ from . import views
 
 
 urlpatterns = [
-   path('' , views.HomePage , name='home' ),
-   path('genress' , views.GenressPage , name='genress' ),
+   path('genres' , views.GenressPage , name='genress' ),
 ]
 
