@@ -28,7 +28,7 @@
 
              <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                {%for el in genress%}
-               <li><a class="dropdown-item header_ul-li" href="#">{{el}}</a></li>
+               <li><a class="dropdown-item header_ul-li" href="{{el.url}}">{{el}}</a></li>
                {%endfor%}
              </ul>
 
@@ -46,7 +46,7 @@
           <form  class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3 form-search" method='get' action="{% url 'home' %}">
             <input name='search' type="search" type="text" class="form-control" placeholder="Search..." aria-label="Search">
           </form>
-  
+
           <div class="dropdown text-end">
 
             <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
