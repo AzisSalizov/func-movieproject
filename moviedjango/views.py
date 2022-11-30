@@ -24,11 +24,18 @@ def FilmPage(request):
         form = AddFilmForm(request.POST , request.FILES)
         if form.is_valid():
             form.save()
+            if request.POST.get('genress' , None):
+                form.genres_id = int(request.POST.get('genress'))
             return redirect('/')
     form = AddFilmForm()
     context = {
         'form':form
     }
     return render(request , 'moviedjango/addfilm.html' ,  context)
+
+def Deletecard(request , id):
+    card = AddFilm.objects.get(id=id)
+    card.delete()
+    return redirect('/')
 
 

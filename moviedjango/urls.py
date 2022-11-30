@@ -7,6 +7,7 @@ urlpatterns = [
     path('' , views.HomePage , name='home' ),
     path('addfim' , views.FilmPage , name='addfilm' ),
     path('search' , views.AddFilm , name='search' ),
+    path('delete-item/<int:id>' , views.Deletecard , name='delete-item' ),
 ]
 
 if settings.DEBUG:

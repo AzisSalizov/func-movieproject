@@ -1,8 +1,5 @@
 from django.shortcuts import render ,  redirect
 from .forms import GenressForm
-from .models import Genress
-from moviedjango.models import AddFilm 
-
 # Create your views here.
 
 
