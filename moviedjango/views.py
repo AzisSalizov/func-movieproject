@@ -33,8 +33,8 @@ def FilmPage(request):
     }
     return render(request , 'moviedjango/addfilm.html' ,  context)
 
-def Deletecard(request , id):
-    card = AddFilm.objects.get(id=id)
+def DeleteCard(request , pk):
+    card = AddFilm.objects.filter(id=pk)
     card.delete()
     return redirect('/')
 

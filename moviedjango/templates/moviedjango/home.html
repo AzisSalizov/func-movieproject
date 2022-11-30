@@ -16,6 +16,9 @@
                                     <p>Жанр: {{el.genress}}</p>
                                     <p>Страна: {{el.country}}</p>
                                     <p>Ссылка: <a class="card-li" href="{{el.url}}">{{el.url}}</a></p>
+                                    <div class="card-del_con">
+                                      <a href="{% url 'delete-item' el.id %}"><button class="btn btn-success">Delete</button></a>
+                                    </div>
                                  </div>
                               </div>
                         </div>
